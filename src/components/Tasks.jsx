@@ -23,9 +23,9 @@ function Tasks({ tasks, onDeleteTaskClick, onTaskClick }) {
               task.isCompleted && "line-through"
             }`}
           >
-            {/*{task.isCompleted ? <CheckIcon /> : null} condicional  */}
-            {task.isCompleted && <CheckIcon />} {/* AND operator  */}
-            {task.title}
+            {task.isCompleted && <CheckIcon className="w-5 h-5" />}{" "}
+            {/* Ícone à esquerda */}
+            <span className="flex-1 text-center">{task.title}</span>
           </button>
           <Button onClick={() => seeDetailsOnClick(task)}>
             <ChevronRightIcon />
